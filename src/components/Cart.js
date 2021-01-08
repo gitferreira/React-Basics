@@ -2,7 +2,7 @@ import React from 'react';
 import "./cart.css";
 import Product from "./Product";
 
-const Cart = ({cart}) => (
+const Cart = ({cart, addProduct}) => (
 
 <div className = "cart">
 	<h2>Your Cart:</h2>
@@ -15,12 +15,11 @@ const Cart = ({cart}) => (
 			<Product
 			key = {product.id}
 			product = {product}
+			cart = {cart}
+			addProduct = {addProduct}
 			/>
 			))}
 	
-</div>
-
-
-)
+</div> )
  
 export default Cart;
